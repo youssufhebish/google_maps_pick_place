@@ -1,0 +1,22 @@
+name: google_maps_pick_place
+description: A pub.dev package which helps pick a location from google maps
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.1.5
+  geolocator: ^8.2.1
+  geocoding: ^2.0.4
+  permission_handler: ^9.2.0
+  dio: ^4.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
