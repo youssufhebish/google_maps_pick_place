@@ -57,7 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
               'Longitude: $longitude',
             ),
             RaisedButton(
-              child: Text('Pick Place'),
               color: Colors.blue,
               elevation: 0.0,
               onPressed: () {
@@ -77,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
+              child: const Text('Pick Place'),
             ),
           ],
         ),
