@@ -1,6 +1,10 @@
 # Google Maps Pick Place
 
 > A pub.dev package to handle picking place from google map and use the picked data in the app.
+ 
+## Follow Me
+
+[![linkedIn](https://img.shields.io/badge/-linkedIn-blue)](https://www.linkedin.com/in/yousseufhebish/) [![GitHub followers](https://img.shields.io/github/followers/youssufhebish?style=social)](https://github.com/youssufhebish) [![GitHub Repo stars](https://img.shields.io/github/stars/youssufhebish/google_maps_pick_place?style=social)](https://github.com/youssufhebish/google_maps_pick_place) [![GitHub forks](https://img.shields.io/github/forks/youssufhebish/google_maps_pick_place?style=social)](https://github.com/youssufhebish/google_maps_pick_place) [![Pub Version](https://img.shields.io/pub/v/google_maps_pick_place)](https://pub.dev/packages/google_maps_pick_place)
 
 - 🌟 Easy to use 🌟
 - 🚀 Saves a lot of time 🚀
@@ -17,10 +21,6 @@
 
 ## Preview
 ![](resources/preview.gif)
-
-## Follow Me
-
-[![linkedIn](https://img.shields.io/badge/-linkedIn-blue)](https://www.linkedin.com/in/yousseufhebish/) [![GitHub followers](https://img.shields.io/github/followers/youssufhebish?style=social)](https://github.com/youssufhebish) [![GitHub Repo stars](https://img.shields.io/github/stars/youssufhebish/google_maps_pick_place?style=social)](https://github.com/youssufhebish/google_maps_pick_place) [![GitHub forks](https://img.shields.io/github/forks/youssufhebish/google_maps_pick_place?style=social)](https://github.com/youssufhebish/google_maps_pick_place) [![Pub Version](https://img.shields.io/pub/v/google_maps_pick_place)](https://pub.dev/packages/google_maps_pick_place) 
 
 ## Getting Started
 
