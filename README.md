@@ -176,6 +176,11 @@ Navigator.push(
     );
 ```
 
+### Note
+> Searching for a place feature needs a paid google map api key.
+> With free key map and picking a place feature will work correctly without any error.
+> But searching for a place feature will not work.
+
 ### Google Maps Pick Place Properties
 
 Parameter | Type | Description
