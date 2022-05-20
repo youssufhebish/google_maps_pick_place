@@ -10,6 +10,7 @@ class SearchButton extends StatelessWidget {
     required this.getLocation,
     required this.apiKey,
     required this.loader,
+    required this.searchLanguage,
     Key? key,
   }) : super(key: key);
 
@@ -18,13 +19,14 @@ class SearchButton extends StatelessWidget {
   final dynamic Function(LatLng) getLocation;
   final String apiKey;
   final Widget loader;
+  final String searchLanguage;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
         addressLabelState();
-        showSearchDialog(context, addressLabelState, getLocation, apiKey, loader);
+        showSearchDialog(context, addressLabelState, getLocation, apiKey, searchLanguage, loader,);
       },
       child: Padding(
         padding: const EdgeInsets.all(10.0),

@@ -11,6 +11,7 @@ class SearchWidget extends StatefulWidget {
     required this.getLocation,
     required this.apiKey,
     required this.loader,
+    required this.searchLanguage,
     Key? key,
   }) : super(key: key);
 
@@ -19,6 +20,7 @@ class SearchWidget extends StatefulWidget {
   final dynamic Function(LatLng) getLocation;
   final String apiKey;
   final Widget loader;
+  final String searchLanguage;
 
   @override
   State<SearchWidget> createState() => _SearchWidgetState();
@@ -70,7 +72,8 @@ class _SearchWidgetState extends State<SearchWidget> {
         'https://maps.googleapis.com/maps/api/place/textsearch/json',
         queryParameters: {
           'query' : keyword,
-          'key' : apiKey
+          'key' : apiKey,
+          'language' : widget.searchLanguage,
         },
       );
       mapModel = MapModel.fromJson(response.data);

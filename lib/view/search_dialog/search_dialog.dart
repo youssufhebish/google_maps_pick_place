@@ -9,12 +9,12 @@ showSearchDialog(
   dynamic addressLabelState,
   dynamic Function(LatLng) getLocation,
   String apiKey,
+  String searchLanguage,
   Widget loader,
 ) {
   return showDialog(
     context: context,
     barrierDismissible: false,
-    barrierColor: Colors.black.withOpacity(0.15),
     builder: (context) {
       return WillPopScope(
         onWillPop: () async => false,
@@ -25,6 +25,7 @@ showSearchDialog(
           child: SearchWidget(
             addressLabelState: addressLabelState,
             getLocation: getLocation,
+            searchLanguage: searchLanguage,
             apiKey: apiKey,
             loader: loader,
           ),

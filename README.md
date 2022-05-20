@@ -20,9 +20,9 @@
 
 ## Follow Me
 
-<a href="https://www.linkedin.com/in/yousseufhebish/" target="_blank"><img src="https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-png.png" alt="Connect me On linked in" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+<a href="https://www.linkedin.com/in/yousseufhebish/" target="_blank"><img src="https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-png.png" alt="Connect me On linked in" style="height: 100px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-<a href="https://github.com/youssufhebish/" target="_blank"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Emblem.png" alt="Follow me on github" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+<a href="https://github.com/youssufhebish/" target="_blank"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Emblem.png" alt="Follow me on github" style="height: 100px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ## Getting Started
 
@@ -183,10 +183,11 @@ Navigator.push(
 Parameter | Type | Description
 --------- | ---- | -----------
 apiKey | String | Google Map Api Token
+searchLanguage | String | Language for search
 getResult | Function(FullAddress)? | Method of Getting the address and position
 initialPosition | LatLng | Initial position of the map in case there's no location and GPS is off
 enableMyLocationButton | bool | Enable or disable the My Location button
-apenableSearchButtoniKey | bool | Enable or disable the Search button
+enableSearchButton | bool | Enable or disable the Search button
 loader | Widget | Widget to show while the map is loading
 doneButton | Widget? | Widget to show when the map is done loading and apply getResult method
 errorButton | Widget? | Widget to show when there's a corruption or there's no internet connection
