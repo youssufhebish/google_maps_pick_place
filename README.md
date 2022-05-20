@@ -16,13 +16,11 @@
 - handle refuse GPS access case
 
 ## Preview
-![](preview.gif)
+![](resources/preview.gif)
 
 ## Follow Me
 
-<a href="https://www.linkedin.com/in/yousseufhebish/" target="_blank"><img src="https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-png.png" alt="Connect me On linked in" style="height: 100px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
-<a href="https://github.com/youssufhebish/" target="_blank"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Emblem.png" alt="Follow me on github" style="height: 100px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+[![GitHub followers](https://img.shields.io/github/followers/youssufhebish?style=social)](https://github.com/youssufhebish) [![GitHub Repo stars](https://img.shields.io/github/stars/youssufhebish/google_maps_pick_place?style=social)](https://github.com/youssufhebish/google_maps_pick_place) [![GitHub forks](https://img.shields.io/github/forks/youssufhebish/google_maps_pick_place?style=social)](https://github.com/youssufhebish/google_maps_pick_place) [![Pub Version](https://img.shields.io/pub/v/google_maps_pick_place)](https://pub.dev/packages/google_maps_pick_place) [![linkedIn](https://img.shields.io/badge/-linkedIn-blue)](https://www.linkedin.com/in/yousseufhebish/)
 
 ## Getting Started
 
