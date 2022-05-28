@@ -1,6 +1,6 @@
 name: google_maps_pick_place
 description: A pub.dev package which helps pick a location from google maps
-version: 0.0.7
+version: 0.8.7
 homepage: https://github.com/youssufhebish/google_maps_pick_place
 
 environment:
