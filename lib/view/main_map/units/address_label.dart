@@ -1,5 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import '../../../localization/get_phrase_method.dart';
+import '../../../localization/language_enum.dart';
+import '../../../localization/phrases_model.dart';
 import '../../../models/address_model.dart';
 
 class AddressLabel extends StatelessWidget {
@@ -11,6 +14,7 @@ class AddressLabel extends StatelessWidget {
       required this.notConnected,
       this.done,
       this.error,
+      this.mapLanguage = Language.arabic,
       Key? key})
       : super(key: key);
   final FullAddress address;
@@ -20,6 +24,7 @@ class AddressLabel extends StatelessWidget {
   final Function(FullAddress) onTap;
   final Widget? done;
   final Widget? error;
+  final Language mapLanguage;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -43,7 +48,7 @@ class AddressLabel extends StatelessWidget {
                   : Column(
                       children: <Widget>[
                         notConnected? Text(
-                          Directionality.of(context).name == 'rtl' ? 'لا يوجد اتصال بالانترنت \n حاول مرة أخرى' : 'No internet connection \n try again later',
+                          '${getPhrase(Phrases.noInternetConnection, mapLanguage.languageCode)}\n${getPhrase(Phrases.tryAgain, mapLanguage.languageCode)}',
                           textAlign: TextAlign.center,
                           maxLines: 3,
                           textScaleFactor: 1.0,

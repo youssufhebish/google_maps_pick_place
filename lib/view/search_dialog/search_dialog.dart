@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
+import '../../localization/language_enum.dart';
 import 'units/search_widget.dart';
 
 
@@ -9,7 +9,7 @@ showSearchDialog(
   dynamic addressLabelState,
   dynamic Function(LatLng) getLocation,
   String apiKey,
-  String searchLanguage,
+  Language mapLanguage,
   Widget loader,
 ) {
   return showDialog(
@@ -25,7 +25,7 @@ showSearchDialog(
           child: SearchWidget(
             addressLabelState: addressLabelState,
             getLocation: getLocation,
-            searchLanguage: searchLanguage,
+            mapLanguage: mapLanguage,
             apiKey: apiKey,
             loader: loader,
           ),

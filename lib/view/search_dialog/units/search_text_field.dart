@@ -1,5 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import '../../../localization/get_phrase_method.dart';
+import '../../../localization/language_enum.dart';
+import '../../../localization/phrases_model.dart';
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({
@@ -7,6 +10,7 @@ class SearchTextField extends StatelessWidget {
     required this.getPlaces,
     required this.apiKey,
     required this.addressLabelState,
+    required this.mapLanguage,
     Key? key,
   })
       : super(key: key);
@@ -19,6 +23,7 @@ class SearchTextField extends StatelessWidget {
   final Function(String apiKey, String keyword, ) getPlaces;
   /// The method which hide the address label.
   final dynamic addressLabelState;
+  final Language mapLanguage;
 
   @override
   Widget build(BuildContext context) {
@@ -62,9 +67,7 @@ class SearchTextField extends StatelessWidget {
                     getPlaces: getPlaces,
                     apiKey: apiKey,
                     addressLabelState: addressLabelState),
-                hintText: Directionality.of(context).name == 'rtl'
-                    ? 'ابحث عن موقع'
-                    : 'Search for a location',
+                hintText: getPhrase(Phrases.searchForPlace, mapLanguage.languageCode),
                 filled: true,
                 fillColor: Colors.transparent,
                 border: OutlineInputBorder(

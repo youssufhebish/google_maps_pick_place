@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import '../../../google_maps_pick_place.dart';
 import '../../../models/map_model.dart';
 import 'search_list.dart';
 import 'search_text_field.dart';
@@ -11,7 +11,7 @@ class SearchWidget extends StatefulWidget {
     required this.getLocation,
     required this.apiKey,
     required this.loader,
-    required this.searchLanguage,
+    required this.mapLanguage,
     Key? key,
   }) : super(key: key);
 
@@ -20,7 +20,7 @@ class SearchWidget extends StatefulWidget {
   final dynamic Function(LatLng) getLocation;
   final String apiKey;
   final Widget loader;
-  final String searchLanguage;
+  final Language mapLanguage;
 
   @override
   State<SearchWidget> createState() => _SearchWidgetState();
@@ -47,12 +47,14 @@ class _SearchWidgetState extends State<SearchWidget> {
         SearchTextField(
           addressLabelState: widget.addressLabelState,
           searchController: searchController,
+          mapLanguage: widget.mapLanguage,
           apiKey: widget.apiKey,
           getPlaces: getPlaces,
         ),
         SearchList(
           getSearched: getSearched,
           isSearching: isSearching,
+          mapLanguage: widget.mapLanguage,
           isError: isError,
           mapModel: mapModel,
           getLocation: widget.getLocation,
@@ -73,7 +75,7 @@ class _SearchWidgetState extends State<SearchWidget> {
         queryParameters: {
           'query' : keyword,
           'key' : apiKey,
-          'language' : widget.searchLanguage,
+          'language' : widget.mapLanguage.languageCode,
         },
       );
       mapModel = MapModel.fromJson(response.data);

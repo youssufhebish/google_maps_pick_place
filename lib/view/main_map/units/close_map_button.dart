@@ -16,10 +16,14 @@ class CloseMapButton extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: withShadowDecoration(
               CircleAvatar(
-                radius: 15.0,
+                radius: 17.0,
                 backgroundColor: Colors.transparent,
+                // backgroundColor: MediaQuery.of(context).platformBrightness == Brightness.light
+                //     ? Colors.white
+                //     : Colors.black,
                 child: Icon(
                   Icons.cancel_outlined,
+                  size: 25.0,
                   color: Theme.of(context).primaryColor,
                 ),
               ),

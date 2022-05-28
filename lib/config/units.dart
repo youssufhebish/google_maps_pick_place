@@ -16,12 +16,12 @@ Position customPosition(LatLng latLng) => Position(
 /// Custom Marker
 Marker customMarker(
   LatLng? latLng,
-  void Function(LatLng)? drag, {
+  void Function(LatLng)? onDragEnd, {
   MarkerColor markerColor = MarkerColor.red,
 }) =>
     Marker(
       draggable: true,
-      onDragEnd: drag,
+      onDragEnd: onDragEnd,
       markerId: const MarkerId('0'),
       position: latLng!,
       icon: colors[markerColor]!,

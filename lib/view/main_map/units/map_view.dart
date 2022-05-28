@@ -35,7 +35,7 @@ class MapWidget extends StatelessWidget {
         marker,
       },
       onMapCreated: onMapCreated,
-      onTap: (latLng) => getLocation(latLng),
+      onTap: getLocation,
     );
   }
 }

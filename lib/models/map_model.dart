@@ -95,9 +95,9 @@ class MapModel {
     if (results != null) {
       final v = results;
       final arr0 = [];
-      v!.forEach((v) {
+      for (var v in v!) {
         arr0.add(v!.toJson());
-      });
+      }
       data['results'] = arr0;
     }
     return data;

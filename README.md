@@ -186,7 +186,7 @@ Navigator.push(
 Parameter | Type | Description
 --------- | ---- | -----------
 apiKey | String | Google Map Api Token
-searchLanguage | String | Language for search
+mapLanguage | Language | map's language used in search and other widgets
 getResult | Function(FullAddress)? | Method of Getting the address and position
 initialPosition | LatLng | Initial position of the map in case there's no location and GPS is off
 enableMyLocationButton | bool | Enable or disable the My Location button

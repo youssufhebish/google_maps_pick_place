@@ -8,6 +8,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../config/methods/camera_moving.dart';
 import '../../config/methods/check_permission.dart';
 import '../../config/units.dart';
+import '../../localization/language_enum.dart';
 import '../../models/address_model.dart';
 import 'units/address_label.dart';
 import 'units/close_map_button.dart';
@@ -18,7 +19,7 @@ import 'units/search_button.dart';
 class GoogleMapsPickPlace extends StatefulWidget {
   const GoogleMapsPickPlace({
     required this.apiKey,
-    this.searchLanguage = 'ar',
+    this.mapLanguage = Language.arabic,
     this.getResult,
     this.initialPosition = const LatLng(29.9773, 31.1325),
     this.enableMyLocationButton = true,
@@ -38,7 +39,7 @@ class GoogleMapsPickPlace extends StatefulWidget {
   /// It's is a [String] that can be either 'ar' or 'en'.
   ///
   /// It's arabic by default.
-  final String searchLanguage;
+  final Language mapLanguage;
   /// Method to get the position of the place on the map
   final Function(FullAddress)? getResult;
   /// Initial position of the map in case there's no location and GPS is off
@@ -100,7 +101,7 @@ class _GoogleMapsPickPlaceState extends State<GoogleMapsPickPlace> {
               if (widget.enableSearchButton)
                 SearchButton(
                   addressLabelState: addressLabelState,
-                  searchLanguage: widget.searchLanguage,
+                  mapLanguage: widget.mapLanguage,
                   getLocation: getLocation,
                   apiKey: widget.apiKey,
                   loader: widget.loader,
@@ -112,6 +113,7 @@ class _GoogleMapsPickPlaceState extends State<GoogleMapsPickPlace> {
             loader: widget.loader,
             notConnected: notConnected,
             loading: loadingLocation,
+            mapLanguage: widget.mapLanguage,
             onTap: (fullAddress) {
               setState(() {
                 notConnected = false;
@@ -154,7 +156,7 @@ class _GoogleMapsPickPlaceState extends State<GoogleMapsPickPlace> {
     }
     final address = addressList.first;
     fullAddress.address = "${address.street}";
-    marker = customMarker(latLng, (latLng) => fullAddress.position = customPosition(latLng), markerColor: widget.markerColor);
+    marker = customMarker(latLng, getLocation, markerColor: widget.markerColor,);
     setState(() {loadingLocation = false;});
   }
 

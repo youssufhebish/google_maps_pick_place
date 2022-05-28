@@ -1,7 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
+import '../../../localization/get_phrase_method.dart';
+import '../../../localization/language_enum.dart';
+import '../../../localization/phrases_model.dart';
 import '../../../models/map_model.dart';
 
 
@@ -14,6 +16,7 @@ class SearchList extends StatelessWidget {
     required this.loader,
     required this.getLocation,
     required this.addressLabelState,
+    required this.mapLanguage,
     Key? key,
   }) : super(key: key);
 
@@ -25,6 +28,7 @@ class SearchList extends StatelessWidget {
   /// Method which getting the location
   final dynamic Function(LatLng) getLocation;
   final dynamic addressLabelState;
+  final Language mapLanguage;
 
   @override
   Widget build(BuildContext context) {
@@ -51,9 +55,7 @@ class SearchList extends StatelessWidget {
                       : isError
                           ? Center(
                               child: Text(
-                                Directionality.of(context).name == 'rtl'
-                                    ? 'خطأ في الاتصال'
-                                    : 'Error in connection',
+                                getPhrase(Phrases.errorInConnection, mapLanguage.languageCode),
                                 textScaleFactor: 1.0,
                                 style: const TextStyle(
                                   color: Colors.red,
@@ -64,12 +66,10 @@ class SearchList extends StatelessWidget {
                           : mapModel.results!.isEmpty
                               ? Center(
                                   child: Text(
-                                    Directionality.of(context).name == 'rtl'
-                                        ? 'لا توجد أماكن'
-                                        : 'No places found',
+                                    getPhrase(Phrases.noPlacesFound, mapLanguage.languageCode),
                                     textScaleFactor: 1.0,
                                     style: TextStyle(
-                                      color: MediaQuery.of(context).platformBrightness == Brightness.light? Colors.grey : Colors.grey[300],
+                                      color: MediaQuery.of(context).platformBrightness == Brightness.light? Colors.black45 : Colors.grey[300],
                                       fontSize: 20.0,
                                     ),
                                   ),
