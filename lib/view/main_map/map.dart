@@ -34,11 +34,11 @@ class GoogleMapsPickPlace extends StatefulWidget {
 
   /// Key for Google Maps API
   final String apiKey;
-  /// [searchLanguage] is the property of [GoogleMapsPickPlace] that controls search results language.
+  /// [mapLanguage] is the property of [GoogleMapsPickPlace] that controls search results language.
   ///
-  /// It's is a [String] that can be either 'ar' or 'en'.
+  /// It's is a [Language] that can be either [Language.arabic] or [Language.english] and other languages.
   ///
-  /// It's arabic by default.
+  /// It's [Language.arabic] by default.
   final Language mapLanguage;
   /// Method to get the position of the place on the map
   final Function(FullAddress)? getResult;
