@@ -19,7 +19,7 @@ import 'units/search_button.dart';
 class GoogleMapsPickPlace extends StatefulWidget {
   const GoogleMapsPickPlace({
     required this.apiKey,
-    this.mapLanguage = Language.arabic,
+    this.mapLanguage = Language.english,
     this.getResult,
     this.initialPosition = const LatLng(29.9773, 31.1325),
     this.enableMyLocationButton = true,
@@ -36,9 +36,9 @@ class GoogleMapsPickPlace extends StatefulWidget {
   final String apiKey;
   /// [mapLanguage] is the property of [GoogleMapsPickPlace] that controls search results language.
   ///
-  /// It's is a [Language] that can be either [Language.arabic] or [Language.english] and other languages.
+  /// It is a [Language] that can be either [Language.arabic] or [Language.english] and other languages.
   ///
-  /// It's [Language.arabic] by default.
+  /// It's [Language.english] by default.
   final Language mapLanguage;
   /// Method to get the position of the place on the map
   final Function(FullAddress)? getResult;
