@@ -19,9 +19,7 @@ import 'units/search_button.dart';
 class GoogleMapsPickPlace extends StatefulWidget {
   const GoogleMapsPickPlace({
     required this.apiKey,
-    this.mapLanguage = Language.
-      
-      ,
+    this.mapLanguage = Language.english,
     this.getResult,
     this.initialPosition = const LatLng(29.9773, 31.1325),
     this.enableMyLocationButton = true,
