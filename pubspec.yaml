@@ -13,7 +13,7 @@ dependencies:
   google_maps_flutter: ^2.1.5
   geolocator: ^8.2.1
   geocoding: ^2.0.4
-  permission_handler: ^9.2.0
+  permission_handler: ^11.0.0
   dio: ^4.0.6
 
 dev_dependencies:
